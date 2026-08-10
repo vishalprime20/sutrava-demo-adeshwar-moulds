@@ -14,7 +14,8 @@
 - **build_status:** PASS (local `npm test` + `SUTRAVA_STRICT=1 npm test`)
 - **build_command:** npm test / SUTRAVA_STRICT=1 npm test
 - **pages_workflow:** `.github/workflows/pages.yml` (GitHub Actions → github-pages)
-- **commit_sha:** `92ecfe231e9677115e4abffad4361eda0813f2d0`
+- **commit_sha:** `75e69c9a3d52c515e10cd3f152b8d0e96e5f1733` (footer credit unlinked — QA re-gate after TLS defect fix)
+- **QA defect fix:** Footer credit is plain text (no `https://sutravasoftwaresolutions.com` href). Re-gate after live Pages publish.
 
 ### Verified facts used on the page
 | Field | Value | Source |
