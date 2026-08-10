@@ -14,7 +14,7 @@
 - **build_status:** PASS (local `npm test` + `SUTRAVA_STRICT=1 npm test`)
 - **build_command:** npm test / SUTRAVA_STRICT=1 npm test
 - **pages_workflow:** `.github/workflows/pages.yml` (GitHub Actions → github-pages)
-- **commit_sha:** (filled after push)
+- **commit_sha:** `91b8ba5b0748b52aece3dc00d987432c0324a84f`
 
 ### Verified facts used on the page
 | Field | Value | Source |
