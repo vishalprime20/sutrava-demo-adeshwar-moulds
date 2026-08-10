@@ -1,0 +1,66 @@
+/*
+  tokens.css — Adeshwar Moulds Pvt. Ltd. (Vatva, Ahmedabad)
+  Tool-steel mould shop: graphite forge, polished plate, signal amber.
+  Distinct from packaging-film cyan and starter SAMPLE copper.
+*/
+
+:root {
+  --color-ink: #12151a;
+  --color-ink-soft: #5a6570;
+  --color-paper: #f2f3f5;
+  --color-paper-elevated: #fafbfc;
+  --color-line: rgba(18, 21, 26, 0.14);
+  --color-accent: #c45c16;
+  --color-accent-deep: #9a420e;
+  --color-accent-soft: rgba(196, 92, 22, 0.14);
+  --color-hero-wash-a: #2a3038;
+  --color-hero-wash-b: #0c0e12;
+  --color-hero-grain: rgba(232, 236, 240, 0.08);
+  --color-steel: #9aa6b2;
+
+  --font-display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Helvetica, sans-serif;
+  --font-body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: clamp(1.25rem, 1.1rem + 0.55vw, 1.45rem);
+  --text-xl: clamp(1.85rem, 1.35rem + 1.6vw, 2.85rem);
+  --text-hero: clamp(2.6rem, 1.7rem + 3.6vw, 4.6rem);
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.32;
+  --leading-body: 1.62;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --radius-sm: 0.15rem;
+  --radius-md: 0.35rem;
+  --radius-lg: 0.55rem;
+
+  --shadow-soft: 0 22px 55px rgba(12, 14, 18, 0.28);
+  --max-width: 70rem;
+  --header-h: 4rem;
+
+  --ease-out: cubic-bezier(0.2, 0.9, 0.25, 1);
+  --dur-fast: 160ms;
+  --dur-med: 480ms;
+  --dur-slow: 1100ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-med: 1ms;
+    --dur-slow: 1ms;
+  }
+}

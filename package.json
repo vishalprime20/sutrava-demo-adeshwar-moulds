@@ -1,0 +1,13 @@
+{
+  "name": "sutrava-demo-adeshwar-moulds",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personalized Sutrava demo for Adeshwar Moulds Pvt. Ltd. (Vatva, Ahmedabad) — Lead SUT-LEAD-20260810-0002 QUALIFIED.",
+  "scripts": {
+    "test": "node scripts/self-test.mjs",
+    "test:strict": "SUTRAVA_STRICT=1 node scripts/self-test.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

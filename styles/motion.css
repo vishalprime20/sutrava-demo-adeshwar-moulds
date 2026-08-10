@@ -1,0 +1,92 @@
+.btn {
+  appearance: none;
+  border: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out);
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #fffaf6;
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-deep);
+  color: #fffaf6;
+  transform: translateY(-1px);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: inherit;
+  border: 1px solid color-mix(in srgb, currentColor 40%, transparent);
+}
+
+.btn--ghost:hover {
+  border-color: currentColor;
+  transform: translateY(-1px);
+}
+
+.btn--on-dark.btn--primary {
+  background: var(--color-paper-elevated);
+  color: var(--color-ink);
+}
+
+.btn--on-dark.btn--primary:hover {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.btn--on-dark.btn--ghost {
+  border-color: rgba(250, 251, 252, 0.45);
+  color: var(--color-paper-elevated);
+}
+
+.btn--on-dark.btn--ghost:hover {
+  background: rgba(250, 251, 252, 0.1);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--dur-med) var(--ease-out),
+    transform var(--dur-med) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn:hover {
+    transform: none;
+  }
+}

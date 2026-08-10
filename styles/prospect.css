@@ -1,0 +1,124 @@
+/* Prospect atmosphere — injection mould / tool steel (Vatva GIDC) */
+
+.hero--mould {
+  background:
+    linear-gradient(105deg, transparent 0 36%, rgba(196, 92, 22, 0.12) 36% 37%, transparent 37%),
+    linear-gradient(165deg, var(--color-hero-wash-a) 0%, #171b22 48%, var(--color-hero-wash-b)),
+    radial-gradient(ellipse at 78% 22%, rgba(154, 166, 178, 0.18), transparent 50%);
+}
+
+.hero--mould::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(232, 236, 240, 0.035) 28px,
+      rgba(232, 236, 240, 0.035) 29px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 28px,
+      rgba(232, 236, 240, 0.035) 28px,
+      rgba(232, 236, 240, 0.035) 29px
+    );
+  mask-image: linear-gradient(to top, transparent 8%, #000 55%);
+  animation: cavity-grid-in var(--dur-slow) var(--ease-out) both;
+}
+
+.hero--mould::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(12, 14, 18, 0.75), transparent);
+}
+
+.hero--mould .hero__inner {
+  padding-bottom: var(--space-8);
+}
+
+.visual-panel--steel {
+  min-height: 15rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(196, 92, 22, 0.45), transparent 52%),
+    linear-gradient(28deg, #1a1f27, #3a4450 55%, #9aa6b2);
+  color: var(--color-paper-elevated);
+}
+
+.visual-panel--steel::before {
+  content: "";
+  position: absolute;
+  inset: 12% 14%;
+  border: 1px solid rgba(250, 251, 252, 0.28);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 10px rgba(18, 21, 26, 0.18);
+  animation: cavity-frame var(--dur-slow) var(--ease-out) both;
+}
+
+.visual-panel--steel::after {
+  content: "";
+  position: absolute;
+  width: 38%;
+  height: 2px;
+  top: 28%;
+  left: 18%;
+  background: rgba(250, 251, 252, 0.55);
+  box-shadow: 0 42px 0 rgba(250, 251, 252, 0.22);
+  animation: steel-scan var(--dur-slow) var(--ease-out) both;
+}
+
+.visual-panel--steel p {
+  position: relative;
+  z-index: 1;
+  color: color-mix(in srgb, var(--color-paper-elevated) 88%, transparent);
+}
+
+@keyframes cavity-grid-in {
+  from {
+    opacity: 0;
+    transform: scale(1.03);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes cavity-frame {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes steel-scan {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero--mould::before,
+  .visual-panel--steel::before,
+  .visual-panel--steel::after {
+    animation: none;
+  }
+}
