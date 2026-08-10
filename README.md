@@ -31,4 +31,4 @@ SUTRAVA_STRICT=1 npm test
 
 ## Concept credit
 
-Website concept by [Sutrava Software Solutions](https://sutravasoftwaresolutions.com).
+Website concept by Sutrava Software Solutions.
